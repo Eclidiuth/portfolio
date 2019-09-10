@@ -4,6 +4,7 @@ html, body {
 
 body {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("../media/snap2019-08-08-09-55-29.png");
+  color: #252525;
   font-family: Yu Gothic;
   margin: 0;
 }
@@ -30,23 +31,34 @@ body {
 }
 
 #navbar h1, #navbar h2 {
-  color: #fff;
   font-size: 16px;
   font-weight: normal;
   margin: 0;
-  padding: 0 12px;
 }
 
 #navbar h1 {
+  font-size: 12px;
+  padding: 0 12px;
   transition: color 0.25s;
 }
 
-#navbar h1:hover {
+#navbar h1 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#navbar h1 a:hover {
   color: #1da1f2;
 }
 
 #navbar h2 {
-  padding: 0 24px;
+  color: #fff;
+  text-align: center;
+  width: 44px;
+}
+
+#navbar h2:hover {
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
 #navbar ul {
@@ -103,13 +115,58 @@ article .article-container {
   margin: 0 auto;
 }
 
+article section {
+  margin-bottom: 36px;
+}
+
 article section h1 {
-  margin: 0;
+  margin: 12px 0;
   padding: 0;
+  font-size: 24px;
 }
 
 .w80p {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+}
+
+#welcome {
+  text-align: center;
+}
+
+#profile {
+  text-align: center;
+}
+
+#profile .profileBox {
+  margin: 0 auto;
+  width: 700px;
+  display: flex;
+  align-items: center;
+}
+
+#profile .profileBox img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+#profile .profileBox a {
+  color: #1da1f2;
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#profile .profileBox .profileBox-content {
+  text-align: start;
+  margin-left: 36px;
+  width: calc(500px - 36px);
+}
+
+#works {
+  text-align: center;
 }
