@@ -45,12 +45,12 @@ body {
 }
 
 #navbar h1 a {
-  color: #fff;
+  color: #1da1f2;
   text-decoration: none;
 }
 
-#navbar h1 a:hover {
-  color: #1da1f2;
+#navbar h1 a img {
+  vertical-align: middle;
 }
 
 #navbar h2 {

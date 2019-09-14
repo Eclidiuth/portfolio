@@ -41,11 +41,11 @@ body {
     transition: color 0.25s;
 
     a {
-      color: #fff;
+      color: rgb(29, 161, 242);
       text-decoration: none;
 
-      &:hover {
-        color: rgb(29, 161, 242);
+      img {
+        vertical-align: middle;
       }
     }
   }
