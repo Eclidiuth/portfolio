@@ -5,7 +5,7 @@ html, body {
 body {
   background-image: linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.35)),url("../media/snap2019-09-13-21-55-14.png");
   color: #252525;
-  font-family: Roboto, Yu Gothic;
+  font-family: ヒラギノ角ゴ, Roboto, "Yu Gothic";
   margin: 0;
 }
 
@@ -14,7 +14,7 @@ body {
   width: 100%;
   background-image: url("../media/snap2019-09-13-21-55-14.png");
   filter: blur(10px);
-  position: absolute;
+  position: fixed;
   margin: -10px;
   z-index: -1;
 }
@@ -109,6 +109,7 @@ article {
   border-radius: 20px;
   min-height: 74%;
   margin-top: 72px;
+  margin-bottom: 72px;
   margin-left: auto;
   margin-right: auto;
   padding: 36px 0;
@@ -183,4 +184,17 @@ article {
 }
 #works {
   text-align: center;
+}
+
+footer {
+  text-align: center;
+  small {
+    background: #fff;
+    border-radius: 20px 20px 0 0;
+    width: 90%;
+    margin: auto;
+    display: block;
+    padding: 9px;
+    font-size: 15px;
+  }
 }
