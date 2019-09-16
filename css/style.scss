@@ -4,6 +4,8 @@ html, body {
 
 body {
   background-image: linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.35)),url("../media/snap2019-09-13-21-55-14.png");
+  background-size: cover;
+  background-position: center center;
   color: #252525;
   font-family: ヒラギノ角ゴ, Roboto, "Yu Gothic";
   margin: 0;
@@ -18,21 +20,23 @@ body {
   height: 100%;
   width: 100%;
   background-image: url("../media/snap2019-09-13-21-55-14.png");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   filter: blur(10px);
   position: fixed;
-  right: -10px;
-  bottom: -10px;
 }
 
 #navbar {
   background-color: rgba(0,0,0,.9);
-  box-shadow: 0 0 3px rgba(0,0,0,.2);
+  box-shadow: 0 0 15px rgba(0,0,0,.5);
   display: flex;
   font-size: 0px;
+  flex-wrap: wrap;
   justify-content: space-between;
   position: fixed;
   width: 100%;
-  height:var(--nav-height);
+  min-height:var(--nav-height);
   top: 0px;
   z-index: 1;
 
@@ -57,32 +61,37 @@ body {
       }
     }
   }
-  .nav {
-    align-items: flex-end;
-    flex-direction: row-reverse;
-    display: flex;
 
-    .nav-button {
-      color: #aaa;
+  input#nav-isOpen {
+    display: none;
+  }
+  .nav-button {
+    color: #aaa;
+    font-size: 16px;
+    height:var(--nav-height);
+    line-height: var(--nav-height);
+    text-align: center;
+    width: 44px;
+    &:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, .15);
+    }
+  }
+
+    input#nav-isOpen:checked ~ ul.link_list li a {
       font-size: 13px;
-      height:var(--nav-height);
       line-height: var(--nav-height);
-      text-align: center;
-      width: 44px;
-      &:hover {
-        color: #fff;
-        background: rgba(255, 255, 255, .15);
-      }
-    }
-    input#nav-isOpen {
-      display: none;
+      height: var(--nav-height);
     }
 
-    ul {
+    ul.link_list {
+      background: rgba(0,0,0,.9);
+      display: flex;
       list-style: none;
       margin: 0;
       padding: 0;
-      display: flex;
+      width: 100%;
+      flex:1 1 100%;
   
       li {
         a {
@@ -92,19 +101,20 @@ body {
           font-weight: 300;
           padding: 0 28px;
           position: relative;
-          transition: color 0.15s;
+          transition: color, 0.15s, font .15s, height .15s, line-height .15s;
           text-decoration: none;
-          height:var(--nav-height);
-          line-height: var(--nav-height);
+          height: 0px;
+          line-height: 0px;
+          overflow: hidden;
           &:after {
             background: rgba(255, 255, 255, .75);
             content: '';
             display: block;
-            height: 1px;
+            height: 2px;
             position: absolute;
             transform: scale(0);
             transition: transform 0.15s;
-            top: 100%;
+            top: calc(100% - 1px);
             left: 0px;
             width: 100%;
           }
@@ -119,8 +129,6 @@ body {
       }
     }
   }
-
-}
 
 article {
   background-color: rgba(255, 255, 255, .95);
