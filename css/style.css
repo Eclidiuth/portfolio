@@ -18,14 +18,17 @@ body {
 }
 
 .bg-image {
-  height: 100%;
-  width: 100%;
+  height: calc(100% + 20px);
+  width: calc(100% + 20px);
   background-image: url("../media/snap2019-09-13-21-55-14.png");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   filter: blur(10px);
+  margin-top: -10px;
+  margin-left: -10px;
   position: fixed;
+  z-index: 1;
 }
 
 #navbar {
@@ -39,7 +42,7 @@ body {
   width: 100%;
   min-height: var(--nav-height);
   top: 0px;
-  z-index: 1;
+  z-index: 2;
 }
 
 #navbar h1 {
@@ -146,6 +149,7 @@ article {
   padding: 54px 0 36px;
   position: relative;
   width: 90%;
+  z-index: 1;
 }
 
 article .banner {
@@ -235,39 +239,26 @@ article ul {
 
 footer {
   background: #fff;
-  border-radius: 20px 20px 0 0;
+  border-radius: 20px;
   text-align: center;
   position: relative;
   width: 90%;
-  margin: auto;
+  margin: 0 auto 20px;
   z-index: 1;
-}
-
-footer p {
-  font-size: 14px;
-  margin: 0;
-  padding: 12px 0 3px;
-}
-
-footer p a {
-  transition: opacity 0.15s;
-  text-decoration: none;
-  color: var(--color-twitter);
-}
-
-footer p a:hover {
-  opacity: 0.7;
-}
-
-footer div.divider {
-  background: var(--color-twitter);
-  height: 1px;
-  width: 90%;
-  margin: 0 auto;
 }
 
 footer small {
   display: block;
   padding: 9px;
   font-size: 14px;
+}
+
+footer small a {
+  transition: opacity 0.15s;
+  text-decoration: none;
+  color: var(--color-twitter);
+}
+
+footer small a:hover {
+  opacity: 0.7;
 }
