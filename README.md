@@ -1,2 +1,2 @@
-# portfolio
-Eclidiuth's portfolia with GitHub Pages(Incomplete)
+# Profile
+Eclidiuth's Profile Site(Incomplete)
